@@ -602,6 +602,13 @@ gap: 0.6rem;
   align-content: center;
   align-items: center;
   gap: 1rem;
+  justify-content: center;
+}
+
+.image-signin{
+  width: 450px;
+  height: 450px;
+  object-fit: contain;
 }
 
 .auth-form{
@@ -819,7 +826,9 @@ button{
 
 }
 
+.image-signin{
 
+}
 
 
 
@@ -1497,8 +1506,14 @@ width: 100%;
 .signin{
   margin-top: 0rem;
   display: flex;
-
+justify-content: center;
 }
+.image-signin{
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+}
+
 .input{
   line-height: 1rem;
   width: 50%;

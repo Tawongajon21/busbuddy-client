@@ -1,5 +1,5 @@
 import React from 'react'
-import bg from "../images/car-bg.png"
+import bg from "../images/photo-ten.jpg"
 import { Link,useLocation,useNavigate } from 'react-router-dom'
 import { useState,useEffect } from 'react'
 import { useDispatch,useSelector } from 'react-redux'
@@ -32,7 +32,7 @@ function Signin() {
             setErrorMessage(error)
             setTimeout(()=>{
                 setErrorMessage('')
-            },3000)
+            },3500)
         }
         else{
             dispatch(usersignin(email,password))
@@ -49,10 +49,11 @@ function Signin() {
            window.location.replace(`${baseUrlFrontend}/`)
         }
        },[userInfo,dispatch])
+       console.log(error);
   return (
     <MainLayout>
   <div class="signin">
-    <img src={bg} alt="" className='image-signin'/>
+    <img  src={bg} alt=""  className='image-signin'/>
     <div class="">
         <div class="brand-auth">
             <header className='brand-header'>

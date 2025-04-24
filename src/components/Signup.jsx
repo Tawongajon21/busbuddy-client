@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import bg from "../images/car-bg.png"
+import bg from "../images/photo-ten.jpg"
 import { useState,useEffect } from 'react'
 import { useDispatch,useSelector } from 'react-redux'
 import {userregister} from "../redux/actions/user"
