@@ -9,6 +9,7 @@ import { getnotifications,recievenotification } from '../redux/actions/notificat
 import NotificationComponent from './NotificationComponent'
 import  io  from 'socket.io-client'
 import store from '../redux/store'
+import { baseUrl } from '../redux/actions/baseUrl'
 
 function Navbar() {
     let userLogin=useSelector((state)=>state.userLogin)
@@ -34,7 +35,7 @@ console.log(navigator.geolocation);
  
 useEffect(() => {
 
-    const socketIo=io('http://localhost:4000'); 
+    const socketIo=io(baseUrl); 
 setsocket(socketIo)
  socketIo.on('connect',(e)=>{
   

@@ -11,6 +11,7 @@ import FormLoading from './FormLoading'
 import {markNotificationAsRead} from "../redux/actions/notifications"
 import  io  from 'socket.io-client'
 import store from '../redux/store'
+import {baseUrl} from "../redux/actions/baseUrl"
 function Notifications() {
   let notifications=useSelector((state)=>state.notifications)
   console.log(notifications);
@@ -33,7 +34,7 @@ function Notifications() {
 
   useEffect(() => {
 
-    const socketIo=io('http://localhost:4000'); 
+    const socketIo=io(baseUrl); 
     setsocket(socketIo)
   
     

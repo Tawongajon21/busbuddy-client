@@ -1,1 +1,1 @@
-export const baseUrlFrontend='http://localhost:3000';
+export const baseUrlFrontend='https://busbuddy-client.vercel.app';

@@ -5,7 +5,8 @@ import { useDispatch,useSelector } from 'react-redux'
 import { gettrips } from '../redux/actions/trips';
 import LazyLoad from "react-lazy-load"
 import ImageLoader from './ImageLoader';
-
+import {baseUrlFrontend} from "../frontend-url"
+import {baseUrl} from "../redux/actions/baseUrl"
 function BusCard({to,from,item}) {
 
   console.log(item.bus);
@@ -21,7 +22,7 @@ function BusCard({to,from,item}) {
     <div className='card'>
       {
 newImageArray.map((item,index)=>(
-<ImageLoader key={index} className={"bus-image"}  imageData={newImageArray} item={item} thumbnail={`http://localhost:4000${item.thumbnail}`} original={`http://localhost:4000${item.newPath}`} />
+<ImageLoader key={index} className={"bus-image"}  imageData={newImageArray} item={item} thumbnail={`${baseUrl}${item.thumbnail}`} original={`${baseUrl}${item.newPath}`} />
 ))
       }
     

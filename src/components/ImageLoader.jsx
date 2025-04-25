@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom'
 import { useDispatch,useSelector } from 'react-redux'
 import { gettrips } from '../redux/actions/trips';
 import LazyLoad from "react-lazy-load"
-
+import {baseUrl} from "../redux/actions/baseUrl"
 function ImageLoader({thumbnail,original,imageData,item,className}) {
-    console.log(item);
+   
     const [src, setsrc] = useState(`data:image/jpeg;base64,${item.thumbnail}`)
 const [loaded, setloaded] = useState(false)
 useEffect(()=>{
 let img=new Image();
-img.src=`http://localhost:4000/${item.newPath}`;
+img.src=`${baseUrl}${item.newPath}`;
 img.onload=()=>{
-    setsrc(`http://localhost:4000/${item.newPath}`)
+    setsrc(`${baseUrl}${item.newPath}`)
     setloaded(true)
 }
 },[item.newPath])
