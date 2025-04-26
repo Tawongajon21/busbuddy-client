@@ -13,7 +13,7 @@ useEffect(()=>{
 let img=new Image();
 img.src=`${baseUrl}${item.newPath}`;
 img.onload=()=>{
-    setsrc(`${baseUrl}${item.newPath}`)
+    setsrc(`https://busbuddy-server.onrender.com/${item.newPath}`)
     setloaded(true)
 }
 },[item.newPath])
